@@ -13,10 +13,12 @@ const Results = () => {
   // โบนัส  = โบนัส
   // เงินได้ทั้งหมด = เงินเดือนทั้งปี+โบนัส
   // ค่าใช้จ่าย = 0.5*เงิินได้ทั้งหมด <= 100000 ? 0.5*เงินได้ทั้งหมด : 100000
+
   let salaryYear = parseInt(formData.salary) * 12;
   let bonus = parseInt(formData.bonus);
   let allMoney = salaryYear + bonus;
   let exp = 0.5 * allMoney <= 100000 ? 0.5 * allMoney : 100000;
+  
   // =========================================
 
   // ถ้า x มากกว่า 5 ให้ดำเนินการ แต่ถ้าไม่ ให้ไปหา else
@@ -29,9 +31,9 @@ const Results = () => {
   // ประกันชีวิต = ค่าประกันชีวิต <= 100000 ? ค่าประกันชีวิต : 100000
 
   let self = 60000;
-  let son =parseInt(formData.son) * 30000 <= 60000? parseInt(formData.son) * 30000: 60000;
-  let pakransangkom =parseInt(formData.pakransangkom) <= 30000? parseInt(formData.pakransangkom): 30000;
-  let pakranshevit =parseInt(formData.pakranshevit) <= 100000? parseInt(formData.pakranshevit): 100000;
+  let son = parseInt(formData.son) * 30000 <= 60000 ? parseInt(formData.son) * 30000 : 60000;
+  let pakransangkom = parseInt(formData.pakransangkom) <= 30000 ? parseInt(formData.pakransangkom) : 30000;
+  let pakranshevit = parseInt(formData.pakranshevit) <= 100000 ? parseInt(formData.pakranshevit) : 100000;
 
   // ค่าลดหย่อน = เงินตัวเอง+ค่าประกันสังคม+ค่าประกันชีวิต
   let loadyoun = self + son + pakransangkom + pakranshevit;
@@ -70,11 +72,10 @@ const Results = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
             <h2 className="shadow-sm">เงินได้ทั้งปี <span>{allMoney}</span> บาท</h2>
             <h2 className="shadow-sm">ค่าใช้จ่าย <span>{exp}</span> บาท</h2>
-            <h2 className="shadow-sm">ค่าประกันสังคม <span>{pakransangkom}</span> บาท</h2>
             <h2 className="shadow-sm">ค่าลดหย่อน <span>{loadyoun}</span> บาท </h2>
             <h2 className="shadow-sm">เงินได้พึงประเมิน <span>{income}</span> บาท</h2>
             <h2 className="shadow-sm">อัตราภาษี <span>{taxRate * 100}</span>% </h2>
-            <h2 className="shadow-sm last">ภาษีที่ต้องชำระ <span>{income * taxRate}</span> บาท</h2>
+            <h2 className="shadow-sm">ภาษีที่ต้องชำระ <span>{income * taxRate}</span> บาท</h2>
           </div>
           <div className="flex justify-end">
           <button className="w-24 p-1.5 rounded-md mt-1.5 bg-indigo-800 text-white">

@@ -1,0 +1,37 @@
+@import 'https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@7/fonts/Anuphan/var/Anuphan[wght].css';  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anuphan', sans-serif; 
+}
+body {
+    background-color: #1B1A55 ;
+}
+label {
+    display: block;
+    font-size: 20px;
+}
+h2 {
+    font-size: 20px;
+    background-color: #e0e7ff;
+    display: block;
+    padding: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+}
+span {
+    font-weight: bold;
+    color: #334155;
+}
+@media only screen and (min-width: 640px) {
+    .last  {
+        width: 589px !important;
+    }
+}

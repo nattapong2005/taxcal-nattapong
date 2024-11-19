@@ -1,2 +1,3 @@
-# Made with love by Nattapong Nakaom (NO AI CHAT BOT )
+# Made with love by Nattapong Nakaom 
+(NO AI CHAT BOT )
 

@@ -32,7 +32,7 @@ const Results = () => {
 
   let self = 60000;
   let son = parseInt(formData.son) * 30000 <= 60000 ? parseInt(formData.son) * 30000 : 60000;
-  let pakransangkom = parseInt(formData.pakransangkom) <= 30000 ? parseInt(formData.pakransangkom) : 30000;
+  let pakransangkom = parseInt(formData.pakransangkom) * 12 <= 30000 ? parseInt(formData.pakransangkom) * 12 : 30000;
   let pakranshevit = parseInt(formData.pakranshevit) <= 100000 ? parseInt(formData.pakranshevit) : 100000;
 
   // ค่าลดหย่อน = เงินตัวเอง+ค่าประกันสังคม+ค่าประกันชีวิต
@@ -57,7 +57,7 @@ const Results = () => {
 
   // *****************************************************
 
-  // โค้ดเขียนโดย นัฐพงษ์ นาคอ่วม และ อำนวยการเขียนโดย นาย ธนกร และ ขัน (Brainstorm)
+  // โค้ดเขียนโดย นัฐพงษ์ นาคอ่วม และ อำนวยการเขียนโดย นาย ธนกร และ ขัน (Brainstorm) ช่วยเคาะบาย ปันนาวัด
   // ** No AI ChatBOT ** ||| Create with brian and love
 
   // *****************************************************
